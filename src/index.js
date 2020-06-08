@@ -1,20 +1,8 @@
 'use strict'
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-mongoose.connect('mongodb://localhost/hng');
 let User = require('./models/user')
-
-let db = mongoose.connection;
-
-db.once('open',()=>{
-    console.log('connected to Mongodb');
-});
-
-// check for db error
-db.on('error', ()=>{
-    console.log(err);
-});
+const db = require("./database/index");
 
 // init app
 const app = express();
@@ -30,6 +18,7 @@ app.get('/', (req,res)=>{
 
 // listen on port 
 app.listen(2000, function(){
+    console.log("\n##############################")
     console.log('Server started on port 2000')
 });
 
