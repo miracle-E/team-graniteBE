@@ -1,7 +1,9 @@
 # top-most EditorConfig file
-"root" : true
+"root" : true,
 
 "editor.tabSize": 2,
+"semi": false,
+"singleQuote:": true,
 "emmet.includeLanguages": {
     "html": "html",
     "javascript": "javascriptreact"
@@ -18,4 +20,8 @@
 
 # Don't mess with json files
 [*.json]
-"exclude": true
+"exclude": true,
+
+[{package.json,.travis.yml}]
+"indent_style" : space,
+"indent_size" : 2

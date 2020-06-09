@@ -29,6 +29,22 @@ app.get('*', function (req, res, next) {
 
 app.use(handleErrors)
 
+app.post('/add', function (req, res) {
+  let user = new User()
+  user.firstName = req.body.firstName
+  user.lastName = req.body.lastName
+  user.email = req.body.email
+  user.phone = req.body.phone
+  user.save(function (err) {
+    if (err) {
+      console.log(err)
+      return;
+    } else {
+      console.log('saved\n##########################')
+    }
+  })
+})
+
 // listen on port
 app.listen(port, function () {
   console.log('\n##############################')
