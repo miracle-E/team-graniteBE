@@ -1,0 +1,21 @@
+# top-most EditorConfig file
+"root" : true
+
+"editor.tabSize": 2,
+"emmet.includeLanguages": {
+    "html": "html",
+    "javascript": "javascriptreact"
+},
+"workbench.iconTheme": "material-icon-theme",
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 5000,
+"terminal.external.osxExec": "iTerm.app",
+"terminal.integrated.shell.osx": "zsh",
+"editor.wordWrap": "on",
+"editor.formatOnSave": true,
+"editor.formatOnPaste": true,
+"editor.minimap.enabled": false
+
+# Don't mess with json files
+[*.json]
+"exclude": true
